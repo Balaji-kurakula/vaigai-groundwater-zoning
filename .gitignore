@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Streamlit cache
+.streamlit/secrets.toml
+
+# Raw and intermediate data
+data/raw/
+data/standardized/
+
+# Classified rasters: ignore by default, keep deployment-ready files
+data/classified/*
+!data/classified/
+!data/classified/*.tif
+
+# Models: ignore by default, keep deployment model
+models/*
+!models/
+!models/gwpz_xgboost.pkl
+
+# Outputs: ignore by default, keep lightweight deployment artifacts
+outputs/*
+!outputs/
+!outputs/validation_metrics.json
+!outputs/confusion_matrix.png
+!outputs/roc_curve.png
+!outputs/shap_summary.png
+!outputs/gwpz_ahp_rgb.png
+!outputs/gwpz_xgboost_rgb.png
+!outputs/gwpz_statistics_ahp.png
+!outputs/gwpz_statistics_ml.png
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
